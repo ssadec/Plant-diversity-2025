@@ -185,5 +185,5 @@ res_df <- data.frame(Name = recorded_names, res)
 colnames(res_df) <- c("Response", "n_obs", "n_groups", "estimate", "tval", "pval", "df", "ci.lb", "ci.ub", "I2")
 
 View(res_df)
-xlsx::write.xlsx(res, paste(path,"SuppTab3.xlsx",sep=""), row.names = F)
+write.csv(res,'/Users/yusha/Stable3.csv')
 

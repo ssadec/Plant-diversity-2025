@@ -353,7 +353,7 @@ for (i in 1:nrow(paired_names)) {
       if (is.null(fit)) next  
       
       summ <- summary(fit)$tTable
-      # 选择目标系数
+      
       idx <- intersect(c("plant_diversity", "added_plant_species", "r2", "(Intercept)"), rownames(summ))
       if (length(idx) == 0) next
       

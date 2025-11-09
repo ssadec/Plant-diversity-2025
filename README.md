@@ -131,7 +131,7 @@ LnR: the indicator value in treatment groups divided by the indicator value in 
 Indicator: the concrete indicator used to measure invertebrate predator reproduction, predator diversity, predator predation, invertebrate parasitoid growth, parasitoid reproduction, parasitoid diversity, parasitoid parasitism, invertebrate natural enemies (NEs) reproduction, NEs diversity, invertebrate herbivore growth, herbivore reproduction, herbivore damage, crop growth, crop reproduction, and crop quality.
 
 Effect size identity
-To handle non-independence in effect sizes, we have now added a random effect as a unique identifier for each effect size (EsID). Our use of random effects now allowed to account for different variances between the studies. Above R code was used for generating a sequence for effect sizes.
+To handle non-independence in effect sizes, we have now added a random effect as a unique identifier for each effect size. Our use of random effects now allowed to account for different variances between the studies. Above R code was used for generating a sequence for effect sizes.
 # generate a sequence for effect sizes for subsequent calculation of variance-covariance matrixData <- Data[order(Data$S_ID),]Cod<-table(Data$S_ID)esid<-NULLfor (i in 1:length(Cod)){  esid <- c(esid,seq(1,Cod[i],1))}Data$EsID <- esid
 
 Generating new columns for subsequent analysis

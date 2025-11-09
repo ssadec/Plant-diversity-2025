@@ -181,7 +181,6 @@ save_plots_dynamic_custom(q, "SuppFig10")  #
 
 
 
-# 输出汇总结果
 res_df <- data.frame(Name = recorded_names, res)
 colnames(res_df) <- c("Response", "n_obs", "n_groups", "estimate", "tval", "pval", "df", "ci.lb", "ci.ub", "I2")
 

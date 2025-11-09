@@ -138,7 +138,7 @@ for (i in CP_C3) {
     if ("CONTROL_SD" %in% names(dat)) dat$CONTROL_SD[dat$CONTROL_SD < 0.01] <- 0.01
     if ("TREATMENT_SD" %in% names(dat)) dat$TREATMENT_SD[dat$TREATMENT_SD < 0.01] <- 0.01
     
-    # 构建 V_tmp（base）
+    # V_tmp（base）
     V_tmp <- try({
       tcrossprod(sqrt(dat$CONTROL_SD)) /
         sqrt(outer(dat$CONTROL_R * dat$CONTROL_M^2, dat$CONTROL_R * dat$CONTROL_M^2)) +
@@ -373,5 +373,5 @@ if (length(non_pd_list)) {
 }
 
 View(res)
-write.csv(res,'/Users/yusha/Desktop/文章提交/NC提交_Round 2/last_round/new_code/check/Stable4.csv')
+write.csv(res,'/Users/yusha/Stable4.csv')
 
